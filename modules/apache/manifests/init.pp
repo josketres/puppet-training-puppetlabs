@@ -9,6 +9,7 @@ class apache {
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
+    require => Package['httpd'],
   }
 
   file { '/var/www/html':
