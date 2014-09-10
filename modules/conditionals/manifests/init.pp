@@ -9,3 +9,15 @@ class conditionals::in {
     },
   }
 }
+
+class conditionals::out {
+
+  $file_content = $::operatingsystem ? {
+    'CentOS' => 'cent-os',
+    default  => 'unknown'
+  }
+
+  file { '/tmp/os':
+    content => $file_content
+  }
+}
