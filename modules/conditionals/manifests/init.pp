@@ -21,3 +21,19 @@ class conditionals::out {
     content => $file_content
   }
 }
+
+class conditionals::case {
+
+  case $::operatingsystem {
+    'CentOS': {
+      $file_content = 'cent-os'
+    }
+    default : {
+      $file_content = 'unknown'
+    }
+  }
+
+  file { '/tmp/os':
+    content => $file_content
+  }
+}
