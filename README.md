@@ -22,3 +22,8 @@ To get information about a resource
 To get a fact
 
     facter osfamily
+
+
+Other cool stuff
+---------------------
+* Validate the *.pp files before any commit (pre-commit hook).
