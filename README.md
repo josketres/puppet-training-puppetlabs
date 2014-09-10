@@ -1,6 +1,10 @@
 puppet-training-puppetlabs
 ==========================
 
+
+Command-line snippets
+---------------------
+
 To validate a file
 
     puppet parser validate path/to/file.pp
