@@ -1,42 +1,43 @@
 class apache {
 
+  $conf_file = '/etc/httpd/conf/httpd.conf'
+
+  # set defaults for all file resources in this class
+  File {
+    owner  => 'apache',
+    group  => 'apache',
+    mode   => '0644',
+  }
+
   package { 'httpd':
     ensure => installed,
   }
 
   file { '/var/www':
     ensure => directory,
-    owner  => 'root',
-    group  => 'root',
     mode   => '0755',
     require => Package['httpd'],
   }
 
   file { '/var/www/html':
     ensure => directory,
-    owner  => 'root',
-    group  => 'root',
     mode   => '0755',
   }
 
   file { '/var/www/html/index.html':
     source => 'puppet:///modules/apache/index.html',
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0644',
   }
   
   service { 'httpd':
     ensure  => running,
-    subscribe => File['/etc/httpd/conf/httpd.conf'],
+    subscribe => File[$conf_file],
   }
 
-  file { '/etc/httpd/conf/httpd.conf':
+  file { $conf_file:
     ensure  => file,
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
     source  => 'puppet:///modules/apache/httpd.conf',
+    owner  => 'root',
+    group  => 'root',
     require => Package['httpd'],
   }
 
