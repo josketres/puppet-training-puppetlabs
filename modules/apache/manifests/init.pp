@@ -43,7 +43,7 @@ class apache {
   }
 
   file { '/var/www/html/index.html':
-    source => 'puppet:///modules/apache/index.html',
+    content => template('apache/index.html.erb'),
   }
   
   service { $service_name :
