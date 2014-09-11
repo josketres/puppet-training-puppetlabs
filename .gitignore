@@ -1,2 +1,4 @@
 modules/mysql/
 modules/stdlib/
+modules/wordpress/
+modules/concat/
