@@ -1,6 +1,4 @@
-class apache::service {
-
-  $service_name = $params::service_name
+class apache::service inherits apache::params {
 
   service { $service_name :
     ensure  => running,

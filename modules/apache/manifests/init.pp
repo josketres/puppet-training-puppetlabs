@@ -1,15 +1,13 @@
 class apache (
-  $main_doc_root = '/etc/www/html',
-) {
-  Class['params'] -> 
+  $main_doc_root = $apache::params::main_doc_root,
+) inherits apache::params {
   Class['install'] ->
   Class['config'] ~>
   Class['service']
 
-  include params, install, config, service
+  include install, config, service
 
   # alternative
-  #  class {'params'} ->
   #  class {'install'} ->
   #  class {'config'} ~>
   #  class {'service'}

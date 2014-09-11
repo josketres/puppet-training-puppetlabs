@@ -7,6 +7,7 @@ class apache::params {
       $group = 'apache'
       $service_name = 'httpd'
       $package_name = 'httpd'
+      $main_doc_root = '/var/www/html'
     }
     'Debian' : {
       $conf_file = '/etc/apache2/apache2.conf'
@@ -14,6 +15,7 @@ class apache::params {
       $group = 'www-data'
       $service_name = 'apache2'
       $package_name = 'apache2'
+      $main_doc_root = '/var/www'
     }
     default : {
       fail("osfamily '${::osfamily}' not supported")

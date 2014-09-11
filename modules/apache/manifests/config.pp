@@ -1,8 +1,5 @@
-class apache::config {
+class apache::config inherits apache::params {
 
-  $owner = $params::owner
-  $group = $params::group
-  $conf_file = $params::conf_file
   $main_doc_root = $apache::main_doc_root
 
   # set defaults for all file resources in this class
