@@ -24,6 +24,11 @@ To get a fact
     facter osfamily
 
 
+Get the current location of the config file
+
+    puppet config print confdir
+    
+
 Other cool stuff
 ---------------------
 * Validate the *.pp files before any commit (pre-commit hook).
