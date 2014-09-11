@@ -46,6 +46,10 @@ To debug a hiera entry
     puppet apply -e 'notice(hiera(apache::main_doc_root))' --debug | grep "Debug: hiera\|Notice:"
     hiera apache::main_doc_root --debug fqdn=josue.puppetlabs.vm
 
+Install mysql-module (for webserver-lab)
+
+    puppet module install puppetlabs-mysql
+
 Other cool stuff
 ---------------------
 * Validate the *.pp files before any commit (pre-commit hook).
