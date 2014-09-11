@@ -2,11 +2,13 @@ include apache
 
 $vhosts = {
   'gonzo.puppetlabs.vm' => {
-    main_doc_root => '/var/www/gonzo.puppetlabs.vm',
+    docroot => '/var/www/gonzo.puppetlabs.vm',
   },
   'elmo.puppetlabs.vm' => {
-    main_doc_root => '/var/www/elmo.puppetlabs.vm',
+    docroot => '/var/www/elmo.puppetlabs.vm',
   }
 }
 
 create_resources(apache::vhost, $vhosts)
+#  puppet apply modules/apache/tests/vhost2.pp --noop --debug
+

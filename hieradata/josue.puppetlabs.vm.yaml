@@ -1,2 +1,7 @@
 ---
 apache::main_doc_root: "/var/www/html-hiera-specific"
+apache::vhosts:
+  gonzo.puppetlabs.vm:
+    docroot: '/var/www/gonzo.puppetlabs.vm'
+  elmo.puppetlabs.vm:
+    docroot: '/var/www/elmo.puppetlabs.vm'
