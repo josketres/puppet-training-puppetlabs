@@ -43,7 +43,7 @@ Get current puppet configuration
 
 To debug a hiera entry
 
-    puppet apply -e 'notice(hiera(message))' --debug | grep "Debug: hiera"
+    puppet apply -e 'notice(hiera(message))' --debug | grep "Debug: hiera\|Notice:"
 
 Other cool stuff
 ---------------------
