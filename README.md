@@ -41,9 +41,9 @@ Get current puppet configuration
     puppet agent --configprint all
     puppet master --configprint all
 
-To test a hiera entry
+To debug a hiera entry
 
-    puppet apply -e 'notice(hiera(entryname))'
+    puppet apply -e 'notice(hiera(message))' --debug | grep "Debug: hiera"
 
 Other cool stuff
 ---------------------
