@@ -36,6 +36,10 @@ Get the path where the modules are located
 
     puppet config print modulepath
     
+Get current puppet configuration
+
+    puppet agent --configprint all
+    puppet master --configprint all
 
 Other cool stuff
 ---------------------
