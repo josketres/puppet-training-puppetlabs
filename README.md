@@ -44,6 +44,7 @@ Get current puppet configuration
 To debug a hiera entry
 
     puppet apply -e 'notice(hiera(message))' --debug | grep "Debug: hiera\|Notice:"
+    hiera apache::main_doc_root --debug
 
 Other cool stuff
 ---------------------
