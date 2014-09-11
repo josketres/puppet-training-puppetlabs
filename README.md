@@ -43,8 +43,8 @@ Get current puppet configuration
 
 To debug a hiera entry
 
-    puppet apply -e 'notice(hiera(message))' --debug | grep "Debug: hiera\|Notice:"
-    hiera apache::main_doc_root --debug
+    puppet apply -e 'notice(hiera(apache::main_doc_root))' --debug | grep "Debug: hiera\|Notice:"
+    hiera apache::main_doc_root --debug fqdn=josue.puppetlabs.vm
 
 Other cool stuff
 ---------------------
