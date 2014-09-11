@@ -32,6 +32,10 @@ Get the list of available modules in the node
 
     puppet module list
     
+Get the path where the modules are located
+
+    puppet config print modulepath
+    
 
 Other cool stuff
 ---------------------
