@@ -46,7 +46,7 @@ To debug a hiera entry
     puppet apply -e 'notice(hiera(apache::main_doc_root))' --debug | grep "Debug: hiera\|Notice:"
     hiera apache::main_doc_root --debug fqdn=josue.puppetlabs.vm
 
-Install mysql and wordpress modules (for webserver-lab)
+Install mysql and wordpress modules (for blog-webserver-lab)
 
     puppet module install puppetlabs-mysql
     puppet module install hunner-wordpress
