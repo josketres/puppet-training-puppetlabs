@@ -28,6 +28,10 @@ Get the current location of the config file
 
     puppet config print confdir
     
+Get the list of available modules in the node
+
+    puppet module list
+    
 
 Other cool stuff
 ---------------------
