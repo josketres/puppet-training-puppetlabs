@@ -1,0 +1,2 @@
+---
+apache::main_doc_root: "/var/www/html-hiera-specific"
