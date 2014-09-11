@@ -1,5 +1,5 @@
 class apache (
-  $main_doc_root = hiera('apache::main_doc_root', $apache::params::main_doc_root),
+  $main_doc_root = $params::main_doc_root, 
 ) inherits apache::params {
   Class['install'] ->
   Class['config'] ~>
