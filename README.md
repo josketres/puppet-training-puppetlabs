@@ -41,6 +41,10 @@ Get current puppet configuration
     puppet agent --configprint all
     puppet master --configprint all
 
+To test a hiera entry
+
+    puppet apply -e 'notice(hiera(entryname))'
+
 Other cool stuff
 ---------------------
 * Validate the *.pp files before any commit (pre-commit hook).
