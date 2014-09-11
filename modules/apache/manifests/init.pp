@@ -1,4 +1,6 @@
-class apache {
+class apache (
+  $main_doc_root = '/etc/www/html',
+) {
   Class['params'] -> 
   Class['install'] ->
   Class['config'] ~>

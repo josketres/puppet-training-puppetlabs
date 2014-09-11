@@ -3,6 +3,7 @@ class apache::config {
   $owner = $params::owner
   $group = $params::group
   $conf_file = $params::conf_file
+  $main_doc_root = $apache::main_doc_root
 
   # set defaults for all file resources in this class
   File {
@@ -21,13 +22,13 @@ class apache::config {
     mode   => '0755',
   }
 
-  file { '/var/www/html/index.html':
+  file { "${main_doc_root}/index.html":
     content => template('apache/index.html.erb'),
   }
   
   file { $conf_file:
     ensure  => file,
-    source  => 'puppet:///modules/apache/httpd.conf',
+    content  => template('apache/httpd.conf.erb'),
     owner  => 'root',
     group  => 'root',
   }
