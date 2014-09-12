@@ -50,6 +50,10 @@ Install mysql and wordpress modules (for blog-webserver-lab)
 
     puppet module install puppetlabs-mysql
     puppet module install hunner-wordpress
+    
+Test a custom fact
+
+    facter -p my-custom-fact
 
 Other cool stuff
 ---------------------
