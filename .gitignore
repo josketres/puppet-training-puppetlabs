@@ -2,3 +2,6 @@ modules/mysql/
 modules/stdlib/
 modules/wordpress/
 modules/concat/
+modules/apt/
+modules/inifile/
+modules/php/

@@ -37,6 +37,7 @@ File { backup => 'main' }
 
 node 'josue.puppetlabs.vm' {
   include users
+  include roles::hosting::webserver
 }
 
 node default {
